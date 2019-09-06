@@ -1,0 +1,23 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Install Swift
+        run: |
+          # Install swiftenv
+          brew install kylef/formulae/swiftenv
+
+          # Install Swift
+          eval "$(swiftenv init -)"
+
+          alias curl="curl -#"
+          swiftenv install
+          unalias curl
+
+          # Run tests
+          swift test -c release
