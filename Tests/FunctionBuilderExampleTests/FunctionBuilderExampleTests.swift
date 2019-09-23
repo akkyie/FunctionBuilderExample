@@ -17,6 +17,14 @@ final class FunctionBuilderExampleTests: XCTestCase {
         XCTAssertEqual(result, "foo\nbar")
     }
 
+    func testMultipleNumbers() {
+        let result = join {
+            1
+            2
+        }
+        XCTAssertEqual(result, "1\n2")
+    }
+
     func testIf() {
         let condition = true
 
