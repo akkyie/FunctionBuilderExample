@@ -10,8 +10,7 @@ jobs:
       - name: Install Swift
         run: |
           DEBIAN_FRONTEND=noninteractive
-          SWIFT_VERSION=swift-DEVELOPMENT-SNAPSHOT-2019-09-04-a
-          SWIFT_DOWNLOAD_URL=https://swift.org/builds/development/ubuntu1804/$SWIFT_VERSION/$SWIFT_VERSION-ubuntu18.04.tar.gz
+          SWIFT_DOWNLOAD_URL=https://swift.org/builds/swift-5.1-release/ubuntu1804/swift-5.1-RELEASE/swift-5.1-RELEASE-ubuntu18.04.tar.gz
 
           sudo --preserve-env apt-get install clang libicu-dev
 
