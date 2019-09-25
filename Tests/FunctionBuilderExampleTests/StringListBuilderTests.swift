@@ -1,7 +1,7 @@
 import XCTest
 import FunctionBuilderExample
 
-final class FunctionBuilderExampleTests: XCTestCase {
+final class StringListBuilderTests: XCTestCase {
     func testSingleLines() {
         let result = join {
             "foo"
